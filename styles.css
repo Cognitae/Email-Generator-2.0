@@ -1,0 +1,104 @@
+/* Define default styles and color schemes */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #007bff;
+  --input-bg-color: #f8f9fa;
+  --btn-bg-color: #007bff;
+  --btn-text-color: #ffffff;
+}
+
+/* Define styles for dark mode */
+body.dark-mode {
+  --bg-color: #343a40;
+  --text-color: #f8f9fa;
+  --accent-color: #17a2b8;
+  --input-bg-color: #495057;
+  --btn-bg-color: #17a2b8;
+  --btn-text-color: #f8f9fa;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+.header {
+  display: flex;
+  align-items: center; /* Vertically center the logo and title */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-right: 20px; /* Add some space between the logo and the title */
+}
+
+.title {
+  margin: 0; /* Remove default margin from the title */
+  padding-top: 8px; /* Adjust the vertical alignment */
+  padding-left: 15px; /* Move the title slightly to the right */
+}
+
+.input-field {
+width: 100%;
+padding: 8px;
+margin: 5px 0;
+border: 1px solid #ced4da;
+border-radius: 4px;
+background-color: var(--input-bg-color);
+}
+
+.radio-group {
+display: flex;
+align-items: center;
+margin: 10px 0;
+}
+
+.radio-group input[type="radio"] {
+margin-right: 5px;
+}
+
+.text-area {
+width: 100%;
+min-height: 150px;
+padding: 8px;
+margin: 5px 0;
+border: 1px solid #ced4da;
+border-radius: 4px;
+background-color: var(--input-bg-color);
+}
+
+.btn {
+display: inline-block;
+padding: 8px 12px;
+margin: 10px 5px;
+border: none;
+border-radius: 4px;
+background-color: var(--btn-bg-color);
+color: var(--btn-text-color);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+box-shadow: none;
+}
+
+/* Add smooth transitions for theme toggle */
+body, .input-field, .text-area, .btn {
+transition: all 0.3s ease;
+}
