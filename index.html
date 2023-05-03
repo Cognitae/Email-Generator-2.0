@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Flex container to hold the logo and the title -->
+    <div class="header">
+      <!-- Add the logo here -->
+      <img class="logo" src="Resources/logo.png" alt="Your Logo" width="150" height="auto">
+      <!-- Title -->
+      <h1 class="title">Email Genny</h1>
+    </div>
+
+    <!-- Input fields -->
+    <label for="companyName">Company Name:</label>
+    <input type="text" id="companyName" class="input-field">
+    <label for="clientName">Recipient Name:</label>
+    <input type="text" id="clientName" class="input-field">
+    <label for="numImages">Number of Images:</label>
+    <input type="number" id="numImages" class="input-field">
+    <label for="craftType">Craft:</label>
+    <input type="text" id="craftType" class="input-field">
+    <label for="module">Module:</label>
+    <input type="text" id="module" class="input-field">
+
+    <!-- Radio buttons for email templates -->
+    <div class="radio-group">
+      <input type="radio" id="template1" name="emailTemplate" value="1" checked>
+      <label for="template1">Template 1</label>
+      <input type="radio" id="template2" name="emailTemplate" value="2">
+      <label for="template2">Template 2</label>
+      <input type="radio" id="template3" name="emailTemplate" value="3">
+      <label for="template3">Template 3</label>
+    </div>
+
+    <!-- Main text box for the generated email content -->
+    <label for="emailContent">Email Body:</label>
+    <textarea id="emailContent" class="text-area" readonly></textarea>
+
+    <!-- Buttons -->
+    <button id="generateBtn" class="btn">Generate Email</button>
+    <button id="copyBtn" class="btn">Copy</button>
+    <button id="toggleThemeBtn" class="btn">Toggle Dark Mode</button>
+    
+    <!-- Navigation link to the templates page -->
+    <a href="templates.html" class="btn">Go to Templates</a>
+  </div>
+
+  <!-- Include the renderer.js script -->
+  <script src="renderer.js"></script>
+</body>
+</html>
