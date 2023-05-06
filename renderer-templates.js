@@ -1,6 +1,12 @@
 // renderer-templates.js
 const path = require('path');
 const templatesJsonPath = path.join(__dirname, 'templates.json');
+
+// Read the .json file
+fs.readFile(templatesJsonPath, 'utf8', (err, data) => {
+  if (err) throw err;
+  let templates = JSON.parse(data);
+
 // Get the elements from the templates.html page
 const templateEditor1 = document.getElementById('templateEditor1');
 const templateEditor2 = document.getElementById('templateEditor2');
@@ -19,6 +25,7 @@ function saveTemplatesToFile(templates) {
     templateEditor1.focus();
   });
 }
+});
 
 // Event listeners for the "Save" buttons
 saveTemplateBtn1.addEventListener('click', () => {
